@@ -27,7 +27,15 @@ class HomePage extends StatelessWidget {
           children: [
             const TextField(
               cursorColor: Palette.deepBlue,
+              style: TextStyle(color: Palette.deepBlue, fontSize: 14.0),
               decoration: InputDecoration(
+                prefixIcon: Icon(
+                  Icons.search,
+                  color: Palette.lightGrey,
+                  size: 20,
+                ),
+                hintText: '뉴스를 검색해주세요.',
+                hintStyle: TextStyle(color: Palette.lightGrey, fontSize: 14),
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                     width: 1,

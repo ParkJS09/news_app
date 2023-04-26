@@ -1,6 +1,6 @@
 # news_app
 
-A new Flutter project.
+Flutter를 활용한 News App
 
 ## Getting Started
 

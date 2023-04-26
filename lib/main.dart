@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/constants/palette.dart';
 import 'package:news_app/features/show_news/presentation/pages/home_page.dart';
 
 void main() {
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'News App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        colorScheme: const ColorScheme.light().copyWith(
+          secondary: Palette.deepBlue
+        )
       ),
       home: const HomePage(),
     );

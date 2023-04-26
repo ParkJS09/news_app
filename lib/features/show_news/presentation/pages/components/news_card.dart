@@ -6,7 +6,10 @@ class NewsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      margin: const EdgeInsets.only(
+        bottom: 16.0,
+      ),
       width: MediaQuery.of(context).size.width - (2 * 16),
       height: 300,
       child: Stack(
@@ -14,6 +17,10 @@ class NewsCard extends StatelessWidget {
           Container(
             height: 260,
             color: Palette.lightGrey,
+            child: Image.network(
+              'https://images.velog.io/images/jojo_devstory/post/1b2fa208-846b-4cc8-b109-72c30382cead/flutter-logo-sharing.png',
+              fit: BoxFit.cover,
+            ),
           ),
           Positioned(
             left: 16,

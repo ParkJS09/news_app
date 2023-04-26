@@ -24,8 +24,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            TextField(
+          children: [
+            const TextField(
               cursorColor: Palette.deepBlue,
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
@@ -42,10 +42,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            Text(
+            const Text(
               'Top News',
               style: TextStyle(
                 color: Palette.deepBlue,
@@ -53,10 +53,17 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            NewsCard(),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return const NewsCard();
+                },
+              ),
+            )
           ],
         ),
       ),

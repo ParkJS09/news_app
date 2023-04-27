@@ -19,7 +19,9 @@ class NewsViewPage extends StatelessWidget {
         backgroundColor: Palette.background,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
             size: 20,
